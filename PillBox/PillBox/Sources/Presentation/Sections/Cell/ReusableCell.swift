@@ -29,7 +29,6 @@ struct ReusableCell: View {
             }
             .navigationDestination(isPresented: $isPresented) {
                 VStack(spacing: 50) {
-                    Text("avatarTitle").bold()
                     AvatarPickerView(delegate: delegate, cellId: cellModel.id)
                     Button(String(localized: "Seleccionar")) {
                         isPresented = false

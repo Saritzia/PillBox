@@ -14,7 +14,7 @@
 		5217B92F2C9B2411007C4355 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B92E2C9B240E007C4355 /* AddButton.swift */; };
 		5217B9322C9B4DB9007C4355 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5217B9312C9B4DB9007C4355 /* RealmSwift */; };
 		5217B9352C9B4E07007C4355 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9342C9B4DFE007C4355 /* UsersRepository.swift */; };
-		5217B93A2C9B5228007C4355 /* DrugLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9392C9B521F007C4355 /* DrugLocalDataSource.swift */; };
+		5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9392C9B521F007C4355 /* DrugsRepository.swift */; };
 		5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B93D2C9B525C007C4355 /* UsersDataManagementUseCase.swift */; };
 		5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9422C9B5486007C4355 /* DrugsTableView.swift */; };
 		5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */; };
@@ -31,6 +31,9 @@
 		52E187FF2C009E8600FB1EB5 /* PillBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187FE2C009E8600FB1EB5 /* PillBoxUITests.swift */; };
 		52E188012C009E8600FB1EB5 /* PillBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E188002C009E8600FB1EB5 /* PillBoxUITestsLaunchTests.swift */; };
 		52E188162C00A15200FB1EB5 /* ReusableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E188152C00A15200FB1EB5 /* ReusableTableView.swift */; };
+		52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */; };
+		52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */; };
+		52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E372CAB281F0047AEB0 /* DrugEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +60,7 @@
 		5217B92B2C9B10DF007C4355 /* UserTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableView.swift; sourceTree = "<group>"; };
 		5217B92E2C9B240E007C4355 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		5217B9342C9B4DFE007C4355 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
-		5217B9392C9B521F007C4355 /* DrugLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugLocalDataSource.swift; sourceTree = "<group>"; };
+		5217B9392C9B521F007C4355 /* DrugsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsRepository.swift; sourceTree = "<group>"; };
 		5217B93D2C9B525C007C4355 /* UsersDataManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataManagementUseCase.swift; sourceTree = "<group>"; };
 		5217B9422C9B5486007C4355 /* DrugsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableView.swift; sourceTree = "<group>"; };
 		5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +80,9 @@
 		52E187FE2C009E8600FB1EB5 /* PillBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxUITests.swift; sourceTree = "<group>"; };
 		52E188002C009E8600FB1EB5 /* PillBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52E188152C00A15200FB1EB5 /* ReusableTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableView.swift; sourceTree = "<group>"; };
+		52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugConfigurationView.swift; sourceTree = "<group>"; };
+		52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDataManagementUseCase.swift; sourceTree = "<group>"; };
+		52E79E372CAB281F0047AEB0 /* DrugEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +149,8 @@
 		5217B9382C9B5215007C4355 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5217B9392C9B521F007C4355 /* DrugLocalDataSource.swift */,
+				52E79E392CAB28530047AEB0 /* Repositories */,
+				52E79E362CAB280A0047AEB0 /* Entities */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -151,6 +158,7 @@
 		5217B93B2C9B522F007C4355 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				52E79E332CAB26FE0047AEB0 /* UseCases */,
 				5217B93C2C9B5240007C4355 /* Models */,
 			);
 			path = Domain;
@@ -320,6 +328,7 @@
 		52E1880E2C00A05300FB1EB5 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				52E79E2F2CAB244C0047AEB0 /* DrugConfiguration */,
 				5217B9372C9B5209007C4355 /* Drugs */,
 				52E1880F2C00A05A00FB1EB5 /* Users */,
 			);
@@ -343,6 +352,46 @@
 				52E188152C00A15200FB1EB5 /* ReusableTableView.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		52E79E2F2CAB244C0047AEB0 /* DrugConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E302CAB24560047AEB0 /* Presentation */,
+			);
+			path = DrugConfiguration;
+			sourceTree = "<group>";
+		};
+		52E79E302CAB24560047AEB0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52E79E332CAB26FE0047AEB0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		52E79E362CAB280A0047AEB0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E372CAB281F0047AEB0 /* DrugEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		52E79E392CAB28530047AEB0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9392C9B521F007C4355 /* DrugsRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,17 +534,20 @@
 				52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */,
 				5217B92A2C9B1065007C4355 /* UserTableViewModel.swift in Sources */,
 				52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */,
+				52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */,
 				5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */,
 				52E188162C00A15200FB1EB5 /* ReusableTableView.swift in Sources */,
 				5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */,
-				5217B93A2C9B5228007C4355 /* DrugLocalDataSource.swift in Sources */,
+				5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */,
 				5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */,
 				5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */,
 				5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */,
 				523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */,
 				5217B92F2C9B2411007C4355 /* AddButton.swift in Sources */,
 				5217B92C2C9B10E6007C4355 /* UserTableView.swift in Sources */,
+				52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */,
 				5217B9272C9AD795007C4355 /* DrugModel.swift in Sources */,
+				52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */,
 				5286A91A2C9181D700E82284 /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
