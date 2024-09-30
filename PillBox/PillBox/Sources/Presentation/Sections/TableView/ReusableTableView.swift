@@ -4,6 +4,11 @@ protocol SwipableCellDelegateContract {
     func onSwipe(id: String)
 }
 
+enum Step {
+    case user
+    case drug
+}
+
 struct ReusableTableView: View {
     private let constants = Constants()
     private let title: String
@@ -13,6 +18,7 @@ struct ReusableTableView: View {
     private let delegate: AddButtonDelegateContract?
     private let avatarPickerDelegate: AvatarPickerProtocol
     private let swipableCellDelegate: SwipableCellDelegateContract
+    private let step: Step
     
     init(title: String,
          backButtonIsHidden: Bool,
@@ -20,7 +26,8 @@ struct ReusableTableView: View {
          alertTitle: String,
          delegate: AddButtonDelegateContract?,
          avatarPickerDelegate: AvatarPickerProtocol,
-         swipableCellDelegate: SwipableCellDelegateContract) {
+         swipableCellDelegate: SwipableCellDelegateContract,
+         step: Step) {
         self.title = title
         self.backButtonIsHidden = backButtonIsHidden
         self.cells = cells
@@ -28,6 +35,7 @@ struct ReusableTableView: View {
         self.delegate = delegate
         self.avatarPickerDelegate = avatarPickerDelegate
         self.swipableCellDelegate = swipableCellDelegate
+        self.step = step
     }
     
     var body: some View {
@@ -35,7 +43,12 @@ struct ReusableTableView: View {
             List{
                 ForEach(cells) { cellModel in
                     NavigationLink {
-                        // Navegación
+                        switch step {
+                        case .user:
+                            DrugsTableView(drugTableViewModel: DrugsTableViewModel(user: cellModel.title))
+                        case .drug:
+                            DrugConfigurationView()
+                        }
                     } label: {
                         ReusableCell(cellModel: cellModel, delegate: avatarPickerDelegate)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
