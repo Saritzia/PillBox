@@ -11,10 +11,11 @@ struct UserTableView: View {
         ReusableTableView(title: String(localized: "users"),
                           backButtonIsHidden: true,
                           cells: userTableViewModel.cellModels ?? [],
-                          alertTitle:String(localized: "userAlertTitle"),
+                          alertTitle: String(localized: "userAlertTitle"),
                           delegate: userTableViewModel,
                           avatarPickerDelegate: userTableViewModel,
-                          swipableCellDelegate: userTableViewModel)
+                          swipableCellDelegate: userTableViewModel,
+                          step: .user)
     }
 }
 

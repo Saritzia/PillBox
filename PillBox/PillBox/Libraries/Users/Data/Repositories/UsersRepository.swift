@@ -7,7 +7,7 @@ protocol UsersRepositoryContract {
     func updateData(avatar: String, id: String) throws
 }
 
-class UsersRepository: UsersRepositoryContract {
+final class UsersRepository: UsersRepositoryContract {
     let realm = try! Realm()
     
     func fetchUsers() -> [UserModel] {

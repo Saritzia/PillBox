@@ -3,7 +3,7 @@ import Foundation
 final class UserTableViewModel: ReusableTableViewModelContract {
     // MARK: - Properties
     @Published var cellModels: [CellModel]?
-    private var usersDataManagementUseCase: UsersDataManagementUseCaseContract
+    private let usersDataManagementUseCase: UsersDataManagementUseCaseContract
     
     //MARK: - Init
     init() {
@@ -16,8 +16,8 @@ final class UserTableViewModel: ReusableTableViewModelContract {
         Task { @MainActor in
             cellModels = fetchUsers()?.map { userModel in
                 CellModel(id: userModel.idUser,
-                            title: userModel.name,
-                            avatar: userModel.avatar)
+                          title: userModel.name,
+                          avatar: userModel.avatar)
             } ?? []
         }
     }
@@ -37,10 +37,6 @@ private extension UserTableViewModel {
             // navegar a pantalla de error
         }
         fetchData()
-    }
-    
-    func updateData(name: String, avatar: String) {
-        
     }
 }
 // MARK: - Add button delegate
