@@ -16,16 +16,17 @@ struct AvatarPickerView: View {
     }
     
     var body: some View {
-        Picker(selection: $selection) {
-            ForEach(0..<delegate.images.count, id: \.self) { index in
-                Image(delegate.images[index])
-            }.onDisappear {
-                delegate.updateAvatar(avatar: delegate.images[selection], cellId: cellId)
+        Menu("avatarTitle", systemImage: "filemenu.and.cursorarrow") {
+            Picker("", selection: $selection) {
+                ForEach(0..<delegate.images.count, id: \.self) { index in
+                    Image(delegate.images[index]).resizable()
+                }.onDisappear {
+                    delegate.updateAvatar(avatar: delegate.images[selection], cellId: cellId)
+                }
             }
-        } label: {
-            Text("avatarTitle")
-        }
-        .pickerStyle(.menu)
-        .tint(.black)
+        }.tint(.black)
+        Image(delegate.images[selection])
+            .resizable()
+            .frame(width: 150, height: 150, alignment: .center)
     }
 }
