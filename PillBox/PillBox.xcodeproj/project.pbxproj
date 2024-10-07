@@ -22,6 +22,10 @@
 		5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */; };
 		523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 523B25CC2C21C5D000331697 /* Localizable.xcstrings */; };
 		523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B25D02C21D9A900331697 /* ReusableCell.swift */; };
+		526D50C52CB46783002C894D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C42CB4677C002C894D /* ErrorView.swift */; };
+		526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C72CB4701F002C894D /* ImageAndLabels.swift */; };
+		526D50CB2CB470FB002C894D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50CA2CB470F5002C894D /* CustomButton.swift */; };
+		526D50CF2CB474BC002C894D /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50CE2CB474B6002C894D /* SuccessView.swift */; };
 		5286A91A2C9181D700E82284 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286A9192C9181D700E82284 /* UserModel.swift */; };
 		52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */; };
 		52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E52C009E8400FB1EB5 /* ContentView.swift */; };
@@ -68,6 +72,10 @@
 		5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
 		523B25CC2C21C5D000331697 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		523B25D02C21D9A900331697 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		526D50C42CB4677C002C894D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		526D50C72CB4701F002C894D /* ImageAndLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndLabels.swift; sourceTree = "<group>"; };
+		526D50CA2CB470F5002C894D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		526D50CE2CB474B6002C894D /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		5286A9192C9181D700E82284 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		52E187E02C009E8400FB1EB5 /* PillBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxApp.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		5217B93F2C9B5271007C4355 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				526D50CD2CB47491002C894D /* Views */,
 				5217B9402C9B5279007C4355 /* Sections */,
 			);
 			path = Presentation;
@@ -183,6 +192,8 @@
 		5217B9402C9B5279007C4355 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				526D50C92CB470EA002C894D /* CustomButton */,
+				526D50C62CB47003002C894D /* CustomImageAndLabels */,
 				5217B94A2C9CB09E007C4355 /* Picker */,
 				52E188142C00A10F00FB1EB5 /* TableView */,
 				523B25CF2C21D98F00331697 /* Cell */,
@@ -239,6 +250,47 @@
 				523B25D02C21D9A900331697 /* ReusableCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		526D50C22CB46744002C894D /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				526D50C42CB4677C002C894D /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		526D50C62CB47003002C894D /* CustomImageAndLabels */ = {
+			isa = PBXGroup;
+			children = (
+				526D50C72CB4701F002C894D /* ImageAndLabels.swift */,
+			);
+			path = CustomImageAndLabels;
+			sourceTree = "<group>";
+		};
+		526D50C92CB470EA002C894D /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CA2CB470F5002C894D /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		526D50CC2CB47475002C894D /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CE2CB474B6002C894D /* SuccessView.swift */,
+			);
+			path = SuccessView;
+			sourceTree = "<group>";
+		};
+		526D50CD2CB47491002C894D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CC2CB47475002C894D /* SuccessView */,
+				526D50C22CB46744002C894D /* ErrorView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5286A9172C9181B200E82284 /* Domain */ = {
@@ -533,6 +585,7 @@
 				5217B9352C9B4E07007C4355 /* UsersRepository.swift in Sources */,
 				52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */,
 				5217B92A2C9B1065007C4355 /* UserTableViewModel.swift in Sources */,
+				526D50C52CB46783002C894D /* ErrorView.swift in Sources */,
 				52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */,
 				52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */,
 				5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */,
@@ -542,8 +595,11 @@
 				5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */,
 				5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */,
 				5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */,
+				526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */,
 				523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */,
+				526D50CF2CB474BC002C894D /* SuccessView.swift in Sources */,
 				5217B92F2C9B2411007C4355 /* AddButton.swift in Sources */,
+				526D50CB2CB470FB002C894D /* CustomButton.swift in Sources */,
 				5217B92C2C9B10E6007C4355 /* UserTableView.swift in Sources */,
 				52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */,
 				5217B9272C9AD795007C4355 /* DrugModel.swift in Sources */,
