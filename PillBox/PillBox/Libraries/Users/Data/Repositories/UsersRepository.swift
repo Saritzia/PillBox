@@ -12,7 +12,7 @@ final class UsersRepository: UsersRepositoryContract {
     
     func fetchUsers() -> [UserModel] {
         realm.objects(UserEntity.self).compactMap { entity in
-            UserModel(idUser: entity.idUser.stringValue,
+            UserModel(idUser: entity._idUser.stringValue,
                       name: entity.name,
                       avatar: entity.avatar)
         }
@@ -25,14 +25,14 @@ final class UsersRepository: UsersRepositoryContract {
     }
     
     func updateData(avatar: String, id: String) throws {
-        let realmObject = realm.objects(UserEntity.self).filter { $0.idUser.stringValue == id }
+        let realmObject = realm.objects(UserEntity.self).filter { $0._idUser.stringValue == id }
         try realm.write {
             realmObject.first?.avatar = avatar
         }
     }
     
     func deleteData(_ id: String) throws {
-        let realmObject = realm.objects(UserEntity.self).filter { $0.idUser.stringValue == id }
+        let realmObject = realm.objects(UserEntity.self).filter { $0._idUser.stringValue == id }
         try realm.write {
             realm.delete(realmObject)
         }
