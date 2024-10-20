@@ -52,6 +52,7 @@ extension UserTableViewModel: AvatarPickerProtocol {
         ["womanAvatar",
          "oldWomanAvatar",
          "oldManAvatar",
+         "manAvatar",
          "boyAvatar"]
     }
     

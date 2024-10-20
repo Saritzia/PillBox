@@ -12,6 +12,7 @@ final class DrugsTableViewModel: ReusableTableViewModelContract {
     init(userId: String) {
         self.userId = userId
         self.drugsDataManagementUseCase = DrugsDataManagementUseCase()
+        fetchData()
     }
     
     // MARK: - Functions
