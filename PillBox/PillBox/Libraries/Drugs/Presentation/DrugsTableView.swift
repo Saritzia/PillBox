@@ -1,23 +1,20 @@
 import SwiftUI
 
 struct DrugsTableView: View {
+    @EnvironmentObject var router: Router
     @ObservedObject var drugTableViewModel: DrugsTableViewModel
     private let constants = Constants()
-    private let title: String = String(localized: "drugs")
-    private let backButtonIsHidden: Bool = false
     private var cells: [CellModel] {
         drugTableViewModel.cellModels ?? []
     }
-    private let alertTitle: String = String(localized: "drugAlertTitle")
+    
+    init(drugTableViewModel: DrugsTableViewModel) {
+        self.drugTableViewModel = drugTableViewModel
+    }
     
     var body: some View {
-        NavigationStack {
-            List{
-                ForEach(cells) { cellModel in
-                    NavigationLink {
-                        DrugConfigurationView()
-                    } label: {
-                        ReusableCell(cellModel: cellModel, delegate: drugTableViewModel)
+            List(cells) { cellModel in
+                    ReusableCell(cellModel: cellModel, delegate: drugTableViewModel)
                             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                             Button(role: .destructive) {
                                 drugTableViewModel.onSwipe(id: cellModel.id)
@@ -26,13 +23,14 @@ struct DrugsTableView: View {
                             }
                         }
                         .frame(height: 50)
-                        .scaledToFit()
-                    }
-                }
+                        .scaledToFill()
+                        .onTapGesture {
+                            router.navigate(to: .drugConfiguration)
+                        }
             }
             .toolbar(content: {
                 ToolbarItem(placement: .principal) {
-                    Text(title)
+                    Text(String(localized: "drugs"))
                         .colorInvert()
                         .bold()
                         .font(.title3)
@@ -42,14 +40,12 @@ struct DrugsTableView: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(.black, for: .navigationBar)
             .listItemTint(.black)
-            .navigationBarBackButtonHidden(backButtonIsHidden)
+            .navigationBarBackButtonHidden(false)
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
-                    AddButton(alertTitle: alertTitle, delegate: drugTableViewModel)
+                    AddButton(alertTitle: String(localized: "drugAlertTitle"), delegate: drugTableViewModel)
                 }
-            })
-        }
-        .tint(.white)
+            }).tint(.white)
     }
 }
 

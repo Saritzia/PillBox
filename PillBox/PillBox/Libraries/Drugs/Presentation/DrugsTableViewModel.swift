@@ -55,7 +55,7 @@ extension DrugsTableViewModel: AvatarPickerProtocol {
     var images: [String] {
         ["dropAvatar",
          "pillAvatar",
-         "syrupAvatar",
+         "syrupAvatar"
         ]
     }
     
