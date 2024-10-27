@@ -1,17 +1,29 @@
-//
-//  PillBoxApp.swift
-//  PillBox
-//
-//  Created by Sara Lopez Martinez on 24/5/24.
-//
-
 import SwiftUI
 
 @main
 struct PillBoxApp: App {
+    @ObservedObject var router = Router()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $router.navigationPath) {
+                ContentView()
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                        case .userTableView:
+                            UserTableView(userTableViewModel: UserTableViewModel())
+                        case .drugTableView(let id):
+                            DrugsTableView(drugTableViewModel: DrugsTableViewModel(userId: id))
+                        case .successScreen:
+                            SuccessView()
+                        case .errorScreen:
+                            ErrorView()
+                        case .drugConfiguration:
+                            DrugConfigurationView()
+                        }
+                    }
+            }
+            .environmentObject(router)
         }
     }
 }
