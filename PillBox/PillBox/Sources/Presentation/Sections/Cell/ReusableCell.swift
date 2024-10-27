@@ -7,7 +7,8 @@ struct CellModel: Equatable, Identifiable {
 }
 
 struct ReusableCell: View {
-    @State private var isPresented: Bool = false
+    @State private var sheetPresented = false
+    @State private var selection: Int = 0
     private var cellModel: CellModel
     private var delegate: AvatarPickerProtocol
     
@@ -18,28 +19,20 @@ struct ReusableCell: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            NavigationStack {
-                Image(cellModel.avatar)
+            Image(cellModel.avatar)
                     .resizable()
                     .frame(width: 50, height: 50)
                     .clipShape(.circle)
                     .onTapGesture {
-                        isPresented = true
+                        sheetPresented = true
                     }
-            }
-            .navigationDestination(isPresented: $isPresented) {
-                VStack(spacing: 50) {
-                    AvatarPickerView(delegate: delegate, cellId: cellModel.id)
-                    Button(String(localized: "Seleccionar")) {
-                        isPresented = false
+                    .sheet(isPresented: $sheetPresented) {
+                        AvatarPickerView(images: delegate.images, selection: $selection)
                     }
-                    .padding()
-                    .background(.black)
-                    .foregroundStyle(.white)
-                    .bold()
-                    .clipShape(.capsule)
-                }
-            }
+                    .onChange(of: selection) {
+                        delegate.updateAvatar(avatar: delegate.images[selection], cellId: cellModel.id)
+                        sheetPresented = false
+                    }
             Text(cellModel.title)
             Spacer()
         }
