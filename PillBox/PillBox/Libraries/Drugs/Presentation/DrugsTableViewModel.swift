@@ -2,21 +2,19 @@ import Foundation
 import RealmSwift
 
 final class DrugsTableViewModel: ReusableTableViewModelContract {
-    //MARK: - Properties
     @Published var cellModels: [CellModel]?
+    @Published var viewSate: ViewState = .render
     private let userId: String
     private let drugsDataManagementUseCase: DrugsDataManagementUseCaseContract
     
-    
-    //MARK: - Init
     init(userId: String) {
         self.userId = userId
         self.drugsDataManagementUseCase = DrugsDataManagementUseCase()
         fetchData()
     }
     
-    // MARK: - Functions
     func fetchData() {
+        viewSate = .render
         Task { @MainActor in
             cellModels = fetchDrugs(user: userId)?.map { drugModel in
                 CellModel(id: drugModel.idDrug,
@@ -38,16 +36,11 @@ private extension DrugsTableViewModel {
         do {
             try drugsDataManagementUseCase.saveData(drug: name, user: userId)
         } catch {
-            // navegar a pantalla de error
+            viewSate = .error { [weak self] in
+                self?.saveData(name: name)
+            }
         }
         fetchData()
-    }
-}
-// MARK: - Add button delegate
-extension DrugsTableViewModel: AddButtonDelegateContract {
-    @MainActor
-    func addAction(name: String) {
-        saveData(name: name)
     }
 }
 // MARK: - Avatar picker delegate
@@ -55,15 +48,16 @@ extension DrugsTableViewModel: AvatarPickerProtocol {
     var images: [String] {
         ["dropAvatar",
          "pillAvatar",
-         "syrupAvatar"
-        ]
+         "syrupAvatar"]
     }
     
     func updateAvatar(avatar: String, cellId: String) {
         do {
             try drugsDataManagementUseCase.updateAvatar(avatar: avatar, id: cellId, user: userId)
         } catch {
-            // navegar a error
+            viewSate = .error { [weak self] in
+                self?.updateAvatar(avatar: avatar, cellId: cellId)
+            }
         }
         fetchData()
     }
@@ -74,7 +68,9 @@ extension DrugsTableViewModel: SwipableCellDelegateContract {
         do {
             try drugsDataManagementUseCase.deleteData(id, user: userId)
         } catch {
-            // navegar a pantalla de error
+            viewSate = .error { [weak self] in
+                self?.onSwipe(id: id)
+            }
         }
         fetchData()
     }
