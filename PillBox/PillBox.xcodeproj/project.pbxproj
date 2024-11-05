@@ -19,8 +19,10 @@
 		5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */; };
 		5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9472C9C4636007C4355 /* UserEntity.swift */; };
 		5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */; };
+		521AFDDD2CCE2CFA00AA26D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AFDDC2CCE2CF400AA26D2 /* Router.swift */; };
 		523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 523B25CC2C21C5D000331697 /* Localizable.xcstrings */; };
 		523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B25D02C21D9A900331697 /* ReusableCell.swift */; };
+		526908EA2CDA248E00BE5B85 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526908E92CDA248A00BE5B85 /* ViewState.swift */; };
 		526D50C52CB46783002C894D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C42CB4677C002C894D /* ErrorView.swift */; };
 		526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C72CB4701F002C894D /* ImageAndLabels.swift */; };
 		526D50CB2CB470FB002C894D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50CA2CB470F5002C894D /* CustomButton.swift */; };
@@ -69,8 +71,10 @@
 		5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewModel.swift; sourceTree = "<group>"; };
 		5217B9472C9C4636007C4355 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
+		521AFDDC2CCE2CF400AA26D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		523B25CC2C21C5D000331697 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		523B25D02C21D9A900331697 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		526908E92CDA248A00BE5B85 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		526D50C42CB4677C002C894D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		526D50C72CB4701F002C894D /* ImageAndLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndLabels.swift; sourceTree = "<group>"; };
 		526D50CA2CB470F5002C894D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -195,7 +199,6 @@
 				529EF6872CC5260500092E81 /* TableView */,
 				526D50C92CB470EA002C894D /* CustomButton */,
 				526D50C62CB47003002C894D /* CustomImageAndLabels */,
-				5217B94A2C9CB09E007C4355 /* Picker */,
 				523B25CF2C21D98F00331697 /* Cell */,
 				5217B92D2C9B2405007C4355 /* AddButton */,
 			);
@@ -235,9 +238,19 @@
 			path = Picker;
 			sourceTree = "<group>";
 		};
+		521AFDDB2CCE2CD100AA26D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				526908E82CDA248300BE5B85 /* ViewState */,
+				526908E72CDA247B00BE5B85 /* Router */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		523B25CE2C21CC0700331697 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				521AFDDB2CCE2CD100AA26D2 /* Common */,
 				5217B93F2C9B5271007C4355 /* Presentation */,
 				523B25CC2C21C5D000331697 /* Localizable.xcstrings */,
 			);
@@ -251,6 +264,22 @@
 				523B25D02C21D9A900331697 /* ReusableCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		526908E72CDA247B00BE5B85 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				521AFDDC2CCE2CF400AA26D2 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		526908E82CDA248300BE5B85 /* ViewState */ = {
+			isa = PBXGroup;
+			children = (
+				526908E92CDA248A00BE5B85 /* ViewState.swift */,
+			);
+			path = ViewState;
 			sourceTree = "<group>";
 		};
 		526D50C22CB46744002C894D /* ErrorView */ = {
@@ -288,6 +317,7 @@
 		526D50CD2CB47491002C894D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5217B94A2C9CB09E007C4355 /* Picker */,
 				526D50CC2CB47475002C894D /* SuccessView */,
 				526D50C22CB46744002C894D /* ErrorView */,
 			);
@@ -583,6 +613,7 @@
 			files = (
 				5217B9352C9B4E07007C4355 /* UsersRepository.swift in Sources */,
 				52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */,
+				521AFDDD2CCE2CFA00AA26D2 /* Router.swift in Sources */,
 				5217B92A2C9B1065007C4355 /* UserTableViewModel.swift in Sources */,
 				526D50C52CB46783002C894D /* ErrorView.swift in Sources */,
 				52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */,
@@ -590,6 +621,7 @@
 				5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */,
 				529EF6892CC5260500092E81 /* SwipableCellDelegate.swift in Sources */,
 				5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */,
+				526908EA2CDA248E00BE5B85 /* ViewState.swift in Sources */,
 				5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */,
 				5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */,
 				5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */,
