@@ -4,7 +4,27 @@
     "" : {
 
     },
-    "avatarTitle" : {
+    "%lld" : {
+
+    },
+    "AppName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PILLBOX"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PILLBOX"
+          }
+        }
+      }
+    },
+    "AvatarTitle" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -36,6 +56,23 @@
         }
       }
     },
+    "Days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day/s"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Día/s"
+          }
+        }
+      }
+    },
     "Delete" : {
       "localizations" : {
         "en" : {
@@ -52,8 +89,7 @@
         }
       }
     },
-    "drugAlertTitle" : {
-      "extractionState" : "manual",
+    "DrugAlertTitle" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -69,7 +105,24 @@
         }
       }
     },
-    "drugs" : {
+    "DrugName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drug name"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre del fármaco"
+          }
+        }
+      }
+    },
+    "Drugs" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -82,6 +135,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fármacos"
+          }
+        }
+      }
+    },
+    "EndDate" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End date of treatment"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha fin del tratamiento"
           }
         }
       }
@@ -137,6 +207,74 @@
         }
       }
     },
+    "Frequency" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frequency"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frecuencia"
+          }
+        }
+      }
+    },
+    "Hours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hour/s"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hora/s"
+          }
+        }
+      }
+    },
+    "Months" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Month/s"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mes/es"
+          }
+        }
+      }
+    },
+    "Notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Active notifications"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar notificaciones"
+          }
+        }
+      }
+    },
     "OK" : {
       "localizations" : {
         "en" : {
@@ -152,6 +290,42 @@
           }
         }
       }
+    },
+    "OtherInformation" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other important information"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otra información de interés"
+          }
+        }
+      }
+    },
+    "PeriodOfTime" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Period of time"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Periodo de tiempo"
+          }
+        }
+      }
+    },
+    "PillBox" : {
+
     },
     "Retry" : {
       "extractionState" : "manual",
@@ -170,18 +344,35 @@
         }
       }
     },
-    "Seleccionar" : {
+    "SaveConfiguration" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "OK"
+            "value" : "Save configuration"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Seleccionar"
+            "value" : "Salvar configuración"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comenzar"
           }
         }
       }
@@ -267,6 +458,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usuarios"
+          }
+        }
+      }
+    },
+    "Year" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Year/s"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Año/s"
           }
         }
       }
