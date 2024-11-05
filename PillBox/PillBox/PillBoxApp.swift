@@ -16,14 +16,13 @@ struct PillBoxApp: App {
                             DrugsTableView(drugTableViewModel: DrugsTableViewModel(userId: id))
                         case .successScreen:
                             SuccessView()
-                        case .errorScreen:
-                            ErrorView()
                         case .drugConfiguration:
                             DrugConfigurationView()
                         }
                     }
             }
             .environmentObject(router)
+            .tint(.white)
         }
     }
 }
