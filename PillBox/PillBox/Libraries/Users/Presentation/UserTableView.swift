@@ -13,6 +13,25 @@ struct UserTableView: View {
     }
     
     var body: some View {
+        switch userTableViewModel.viewState {
+        case .error(action: let action):
+            ErrorView(action: action)
+        case .render:
+            renderView
+        }
+    }
+}
+
+// MARK: - Constants
+extension UserTableView {
+    struct Constants {
+        let trash = "trash"
+    }
+}
+
+// MARK: - Render view
+private extension UserTableView {
+    var renderView: some View {
         List(cells) { cellModel in
             ReusableCell(cellModel: cellModel, delegate: userTableViewModel)
                 .swipeActions(edge: .trailing, allowsFullSwipe: true) {
@@ -48,11 +67,4 @@ struct UserTableView: View {
         })
     }
 }
-
-extension UserTableView {
-    struct Constants {
-        let trash = "trash"
-    }
-}
-
 

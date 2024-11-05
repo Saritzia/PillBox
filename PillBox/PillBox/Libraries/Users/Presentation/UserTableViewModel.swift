@@ -1,18 +1,17 @@
 import Foundation
 
 final class UserTableViewModel: ReusableTableViewModelContract {
-    // MARK: - Properties
     @Published var cellModels: [CellModel]?
+    @Published var viewState: ViewState = .render
     private let usersDataManagementUseCase: UsersDataManagementUseCaseContract
     
-    //MARK: - Init
     init() {
         self.usersDataManagementUseCase = UsersDataManagementUseCase()
         fetchData()
     }
-    
-    // MARK: - Functions
+
     func fetchData() {
+        viewState = .render
         Task { @MainActor in
             cellModels = fetchUsers()?.map { userModel in
                 CellModel(id: userModel.idUser,
@@ -34,7 +33,9 @@ private extension UserTableViewModel {
         do {
             try usersDataManagementUseCase.saveData(name: name, avatar: "womanAvatar")
         } catch {
-            // navegar a pantalla de error
+            viewState = .error { [weak self] in
+                self?.saveData(name: name)
+            }
         }
         fetchData()
     }
@@ -60,7 +61,9 @@ extension UserTableViewModel: AvatarPickerProtocol {
         do {
             try usersDataManagementUseCase.updateAvatar(avatar: avatar, id: cellId)
         } catch {
-            // navegar a error
+            viewState = .error { [weak self] in
+                self?.updateAvatar(avatar: avatar, cellId: cellId)
+            }
         }
         fetchData()
     }
@@ -71,7 +74,9 @@ extension UserTableViewModel: SwipableCellDelegateContract {
         do {
             try usersDataManagementUseCase.deleteData(id)
         } catch {
-            // navegar a pantalla de error
+            viewState = .error { [weak self] in
+                self?.onSwipe(id: id)
+            }
         }
         fetchData()
     }
