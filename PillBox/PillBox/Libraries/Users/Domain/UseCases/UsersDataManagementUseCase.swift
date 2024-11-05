@@ -6,25 +6,25 @@ protocol UsersDataManagementUseCaseContract {
 }
 
 final class UsersDataManagementUseCase: UsersDataManagementUseCaseContract {
-    private var userRepository: UsersRepositoryContract
+    private let usersRepository: UsersRepositoryContract
     
     init() {
-        self.userRepository = UsersRepository()
+        self.usersRepository = UsersRepository()
     }
     
     func fetchUsers() -> [UserModel]? {
-        userRepository.fetchUsers()
+        usersRepository.fetchUsers()
     }
     
     func saveData(name: String, avatar: String) throws {
-        try userRepository.saveData(name: name, avatar: avatar)
+        try usersRepository.saveData(name: name, avatar: avatar)
     }
     
     func deleteData(_ id: String) throws {
-        try userRepository.deleteData(id)
+        try usersRepository.deleteData(id)
     }
     
     func updateAvatar(avatar: String, id: String) throws {
-        try userRepository.updateData(avatar: avatar, id: id)
+        try usersRepository.updateData(avatar: avatar, id: id)
     }
 }
