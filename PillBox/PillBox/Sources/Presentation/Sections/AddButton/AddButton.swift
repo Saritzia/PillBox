@@ -10,8 +10,8 @@ struct AddButton: View {
     @State private(set) var showingAlert = false
     @State private var name = ""
     private let constans = Constants()
-    private var alertTitle: String
-    private var delegate: AddButtonDelegateContract?
+    private let alertTitle: String
+    private let delegate: AddButtonDelegateContract?
     
     init(alertTitle: String, delegate: AddButtonDelegateContract?) {
         self.alertTitle = alertTitle
@@ -30,7 +30,8 @@ struct AddButton: View {
                 .clipShape(.circle)
                 .foregroundStyle(.black)
                 .bold()
-        }).alert(alertTitle, isPresented: $showingAlert) {
+        })
+        .alert(alertTitle, isPresented: $showingAlert) {
             TextField(alertTitle, text: $name)
             Button(String(localized: "OK")) {
                 delegate?.addAction(name: name)

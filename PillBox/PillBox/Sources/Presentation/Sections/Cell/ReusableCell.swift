@@ -8,13 +8,14 @@ struct CellModel: Equatable, Identifiable {
 
 struct ReusableCell: View {
     @State private var sheetPresented = false
-    @State private var selection: Int = 0
-    private var cellModel: CellModel
-    private var delegate: AvatarPickerProtocol
+    @State private var selection: Int
+    private let cellModel: CellModel
+    private let delegate: AvatarPickerProtocol
     
     init(cellModel: CellModel, delegate: AvatarPickerProtocol) {
         self.cellModel = cellModel
         self.delegate = delegate
+        self.selection = delegate.images.firstIndex { $0 == cellModel.avatar } ?? 0
     }
     
     var body: some View {
