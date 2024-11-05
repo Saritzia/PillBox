@@ -6,6 +6,7 @@ protocol AvatarPickerProtocol {
 }
 
 struct AvatarPickerView: View {
+    @Environment(\.presentationMode) var presentationMode
     @Binding var selection: Int
     private let images: [String]
     
@@ -16,16 +17,20 @@ struct AvatarPickerView: View {
     
     var body: some View {
         VStack(spacing: 50) {
-            Menu("avatarTitle", systemImage: "filemenu.and.cursorarrow") {
+            Menu("AvatarTitle", systemImage: "filemenu.and.cursorarrow") {
                 Picker("", selection: $selection) {
                     ForEach(0..<images.count, id: \.self) { index in
                         Image(images[index]).resizable()
                     }
                 }
-            }.tint(.black)
+            }
+            .tint(.black)
             Image(images[selection])
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
+            CustomButton(title: "OK") {
+                presentationMode.wrappedValue.dismiss()
+            }
         }
         .navigationBarBackButtonHidden()
     }
