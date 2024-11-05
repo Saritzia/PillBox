@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct ErrorView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    private var action: () -> Void
+    @EnvironmentObject var router: Router
+    private var action: (() -> Void)
     
     init(action: @escaping () -> Void) {
         self.action = action
@@ -19,7 +19,7 @@ struct ErrorView: View {
                 action()
             }
             CustomButton(title: "Exit") {
-                presentationMode.wrappedValue.dismiss()
+                router.navigate(to: .userTableView)
             }
         }
     }

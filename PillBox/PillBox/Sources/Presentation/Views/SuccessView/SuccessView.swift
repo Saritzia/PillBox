@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SuccessView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var router: Router
     
     var body: some View {
         ImageAndLabels(imageName: "JiraffeSuccessImage",
@@ -10,7 +10,7 @@ struct SuccessView: View {
         Spacer()
         Divider()
         CustomButton(title: "SuccessButton") {
-            presentationMode.wrappedValue.dismiss()
+            router.navigateBack()
         }
     }
 }
