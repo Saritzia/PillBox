@@ -6,7 +6,7 @@ protocol DrugsDataManagementUseCaseContract {
 }
 
 final class DrugsDataManagementUseCase: DrugsDataManagementUseCaseContract {
-    private var drugsRepository: DrugsRepositoryContract
+    private let drugsRepository: DrugsRepositoryContract
     
     init() {
         self.drugsRepository = DrugsRepository()
