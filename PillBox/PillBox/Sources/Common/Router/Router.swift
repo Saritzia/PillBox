@@ -5,7 +5,6 @@ final class Router: ObservableObject {
         case userTableView
         case drugTableView(id: String)
         case successScreen
-        case errorScreen
         case drugConfiguration
     }
     
