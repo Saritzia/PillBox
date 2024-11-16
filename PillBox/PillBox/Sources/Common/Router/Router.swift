@@ -5,7 +5,7 @@ final class Router: ObservableObject {
         case userTableView
         case drugTableView(id: String)
         case successScreen
-        case drugConfiguration
+        case drugConfiguration(userId: String, drugId: String?)
     }
     
     @Published var navigationPath = NavigationPath()
@@ -16,6 +16,10 @@ final class Router: ObservableObject {
     
     func navigateBack() {
         navigationPath.removeLast()
+    }
+    
+    func navigateBackBeforeSuccess() {
+        navigationPath.removeLast(2)
     }
     
     func navigateToRoot() {
