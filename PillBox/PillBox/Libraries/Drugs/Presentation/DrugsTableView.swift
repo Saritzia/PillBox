@@ -14,10 +14,10 @@ struct DrugsTableView: View {
     
     var body: some View {
         switch drugTableViewModel.viewSate {
-        case .render:
-            renderView
         case .error(let action):
             ErrorView(action: action)
+        default:
+            renderView
         }
     }
 }
@@ -44,7 +44,7 @@ private extension DrugsTableView {
                 .frame(height: 50)
                 .scaledToFill()
                 .onTapGesture {
-                    router.navigate(to: .drugConfiguration)
+                    router.navigate(to: .drugConfiguration(userId: drugTableViewModel.userId, drugId: cellModel.id))
                 }
         }
         .toolbar(content: {
@@ -63,7 +63,7 @@ private extension DrugsTableView {
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
-                    router.navigate(to: .drugConfiguration)
+                    router.navigate(to: .drugConfiguration(userId: drugTableViewModel.userId, drugId: nil))
                 }, label: {
                     Image(systemName: "plus")
                         .resizable()
@@ -77,5 +77,8 @@ private extension DrugsTableView {
             }
         })
         .tint(.white)
+        .onAppear {
+            drugTableViewModel.fetchData()
+        }
     }
 }

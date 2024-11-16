@@ -16,7 +16,7 @@ struct UserTableView: View {
         switch userTableViewModel.viewState {
         case .error(action: let action):
             ErrorView(action: action)
-        case .render:
+        default:
             renderView
         }
     }
