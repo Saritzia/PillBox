@@ -30,6 +30,7 @@
 		5286A91A2C9181D700E82284 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286A9192C9181D700E82284 /* UserModel.swift */; };
 		529EF6892CC5260500092E81 /* SwipableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EF6852CC5260500092E81 /* SwipableCellDelegate.swift */; };
 		529EF68B2CC5266600092E81 /* ReusableTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EF68A2CC5266600092E81 /* ReusableTableViewModel.swift */; };
+		52B3ABF82CE887AE00A71AAE /* DrugConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */; };
 		52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */; };
 		52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E52C009E8400FB1EB5 /* ContentView.swift */; };
 		52E187E82C009E8500FB1EB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E187E72C009E8500FB1EB5 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		5286A9192C9181D700E82284 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		529EF6852CC5260500092E81 /* SwipableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCellDelegate.swift; sourceTree = "<group>"; };
 		529EF68A2CC5266600092E81 /* ReusableTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewModel.swift; sourceTree = "<group>"; };
+		52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugConfigurationViewModel.swift; sourceTree = "<group>"; };
 		52E187E02C009E8400FB1EB5 /* PillBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxApp.swift; sourceTree = "<group>"; };
 		52E187E52C009E8400FB1EB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */,
+				52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */,
 				529EF68B2CC5266600092E81 /* ReusableTableViewModel.swift in Sources */,
 				5286A91A2C9181D700E82284 /* UserModel.swift in Sources */,
+				52B3ABF82CE887AE00A71AAE /* DrugConfigurationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

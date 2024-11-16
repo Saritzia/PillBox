@@ -16,8 +16,9 @@ struct PillBoxApp: App {
                             DrugsTableView(drugTableViewModel: DrugsTableViewModel(userId: id))
                         case .successScreen:
                             SuccessView()
-                        case .drugConfiguration:
-                            DrugConfigurationView()
+                        case let .drugConfiguration(userId, drugId):
+                            DrugConfigurationView(drugsConfiguratioViewModel: DrugsConfigurationViewModel(userId: userId,
+                                                                                                          drugId: drugId))
                         }
                     }
             }
