@@ -10,7 +10,7 @@ struct SuccessView: View {
         Spacer()
         Divider()
         CustomButton(title: "SuccessButton") {
-            router.navigateBack()
+            router.navigateBackBeforeSuccess()
         }
     }
 }
