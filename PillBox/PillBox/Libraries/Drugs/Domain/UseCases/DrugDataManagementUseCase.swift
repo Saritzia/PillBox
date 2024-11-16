@@ -1,8 +1,9 @@
 protocol DrugsDataManagementUseCaseContract {
     func fetchDrugs(user: String) -> [DrugModel]?
-    func saveData(drug: String, user: String) throws
+    func saveData(drug: DrugModel, user: String) throws
     func deleteData(_ id: String, user: String) throws
     func updateAvatar(avatar: String, id: String, user: String) throws
+    func updateConfiguration(user: String, drug: DrugModel) throws
 }
 
 final class DrugsDataManagementUseCase: DrugsDataManagementUseCaseContract {
@@ -16,7 +17,7 @@ final class DrugsDataManagementUseCase: DrugsDataManagementUseCaseContract {
         drugsRepository.fetchDrugs(user: user)
     }
     
-    func saveData(drug: String, user: String) throws {
+    func saveData(drug: DrugModel, user: String) throws {
         try drugsRepository.saveData(drug: drug, user: user)
     }
     
@@ -26,5 +27,9 @@ final class DrugsDataManagementUseCase: DrugsDataManagementUseCaseContract {
     
     func updateAvatar(avatar: String, id: String, user: String) throws {
         try drugsRepository.updateData(avatar: avatar, id: id, user: user)
+    }
+    
+    func updateConfiguration(user: String, drug: DrugModel) throws {
+        try drugsRepository.updateConfiguration(user: user, drug: drug)
     }
 }
