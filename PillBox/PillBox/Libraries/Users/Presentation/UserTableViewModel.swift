@@ -4,31 +4,32 @@ final class UserTableViewModel: ReusableTableViewModelContract {
     @Published var cellModels: [CellModel]?
     @Published var viewState: ViewState = .render
     private let usersDataManagementUseCase: UsersDataManagementUseCaseContract
+    private(set) var currentTask: Task<Void, Error>?
     
     init() {
         self.usersDataManagementUseCase = UsersDataManagementUseCase()
-        fetchData()
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
     }
 
+    @MainActor
     func fetchData() {
         viewState = .render
-        Task { @MainActor in
-            cellModels = fetchUsers()?.map { userModel in
+        cellModels = fetchUsers()?.map { userModel in
                 CellModel(id: userModel.idUser,
                           title: userModel.name,
                           avatar: userModel.avatar)
-            } ?? []
-        }
+        } ?? []
     }
 }
 
 private extension UserTableViewModel {
-    @MainActor
     func fetchUsers() -> [UserModel]? {
         usersDataManagementUseCase.fetchUsers()
     }
     
-    @MainActor
     func saveData(name: String) {
         do {
             try usersDataManagementUseCase.saveData(name: name, avatar: "womanAvatar")
@@ -37,12 +38,14 @@ private extension UserTableViewModel {
                 self?.saveData(name: name)
             }
         }
-        fetchData()
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
     }
 }
 // MARK: - Add button delegate
 extension UserTableViewModel: AddButtonDelegateContract {
-    @MainActor
     func addAction(name: String) {
         saveData(name: name)
     }
@@ -65,7 +68,10 @@ extension UserTableViewModel: AvatarPickerProtocol {
                 self?.updateAvatar(avatar: avatar, cellId: cellId)
             }
         }
-        fetchData()
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
     }
 }
 // MARK: - Swipable cell delegate
@@ -78,7 +84,10 @@ extension UserTableViewModel: SwipableCellDelegateContract {
                 self?.onSwipe(id: id)
             }
         }
-        fetchData()
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
     }
 }
 
