@@ -33,6 +33,8 @@ struct DrugConfigurationView: View {
             renderView.onAppear {
                 setupConfiguration(with: model)
             }
+        case .permissionError(action: let action):
+            PermissionErrorView(action: action, view: self)
         }
     }
 }
@@ -53,6 +55,13 @@ private extension DrugConfigurationView {
                         .bold()
                 }
                 .tint(.green)
+                .onChange(of: isToogleOn, { _, newValue in
+                    Task {
+                        if await drugsConfiguratioViewModel.notificationPermissionDenied && newValue {
+                            drugsConfiguratioViewModel.showPermissionError()
+                        }
+                    }
+                })
                 HStack(spacing: 20) {
                     Label("Frequency", image: "")
                         .foregroundStyle(.black)

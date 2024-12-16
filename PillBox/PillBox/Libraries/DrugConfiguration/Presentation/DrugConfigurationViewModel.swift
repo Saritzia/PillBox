@@ -1,5 +1,7 @@
 import Foundation
 import RealmSwift
+import UIKit
+import UserNotifications
 
 final class DrugsConfigurationViewModel: ObservableObject {
     @Published var drugModel: DrugModel?
@@ -8,6 +10,7 @@ final class DrugsConfigurationViewModel: ObservableObject {
     private let drugId: String?
     private let drugsDataManagementUseCase: DrugsDataManagementUseCaseContract
     private var currentTask: Task<Void, Error>?
+    private let center = UNUserNotificationCenter.current()
     
     init(userId: String, drugId: String? = nil) {
         self.userId = userId
@@ -21,13 +24,16 @@ final class DrugsConfigurationViewModel: ObservableObject {
     
     @MainActor
     func fetchData() {
-        viewState = .render
-        guard let drugId else {
+        Task {
+            await askForPermission()
             viewState = .render
-            return
-        }
-        if let drugModel = self.fetchDrugs(user: self.userId)?.filter({ $0.idDrug == drugId }).first {
-            viewState = .update(model: drugModel)
+            guard let drugId else {
+                viewState = .render
+                return
+            }
+            if let drugModel = self.fetchDrugs(user: self.userId)?.filter({ $0.idDrug == drugId }).first {
+                viewState = .update(model: drugModel)
+            }
         }
     }
     
@@ -45,6 +51,24 @@ final class DrugsConfigurationViewModel: ObservableObject {
         } else {
             saveData(drugModel: model, userId: userId)
         }
+        model.isToogleOn ? sendNotifications(with: model) : deleteNotificationsQueue(with: model)
+    }
+    
+    var notificationPermissionDenied: Bool {
+        /// Obtain the notification settings.
+        get async {
+            await center.notificationSettings().authorizationStatus == .denied
+        }
+    }
+    
+    func showPermissionError() {
+        viewState = .permissionError(action: {
+            if let url = URL(string:UIApplication.openSettingsURLString) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        })
     }
 }
 
@@ -70,6 +94,62 @@ private extension DrugsConfigurationViewModel {
             viewState = .error { [weak self] in
                 self?.saveConfiguration(drugModel: drugModel, userId: userId)
             }
+        }
+    }
+}
+// MARK: - Notifications methods
+private extension DrugsConfigurationViewModel {
+    func askForPermission() async {
+        do {
+            try await center.requestAuthorization(options: [.alert, .sound, .badge])
+        } catch {
+            viewState = .error { [weak self] in
+                Task {
+                    await self?.fetchData()
+                }
+            }
+        }
+    }
+    
+    
+    func sendNotifications(with model: DrugModel) {
+        // Notification content
+        let content = UNMutableNotificationContent()
+        content.title = NSString.localizedUserNotificationString(forKey: "NotificationTitle", arguments: nil)
+        content.body = model.drug ?? ""
+        content.sound = UNNotificationSound.default
+        // Trigger
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: calculateTimeInterval(with: model), repeats: true)
+        // Do the request
+        let request = UNNotificationRequest(identifier: userId + (model.idDrug ?? ""), content: content, trigger: trigger)
+        center.add(request)
+    }
+    
+    func deleteNotificationsQueue(with model: DrugModel) {
+        if let drug = model.drug {
+            center.removePendingNotificationRequests(withIdentifiers: [drug])
+        }
+    }
+    
+    func calculateTimeInterval(with model: DrugModel) -> Double {
+        Double((model.numberOfTimes ?? 1) * calculateTimeUnit(unit: model.timeUnit))
+    }
+    
+    /// This method returns the number of second for each time unit
+    func calculateTimeUnit(unit: Int?) -> Int {
+        switch unit {
+            /// Hour = minutes * seconds
+        case 1:
+            60 * 60
+            /// Day = hours per day * minutes * seconds
+        case 2:
+            24 * 60 * 60
+            /// Month = days * hours per day * minutes * seconds
+        case 3:
+            30 * 24 * 60 * 60
+            /// Year = number of days * hours per day * minutes * seconds
+        default:
+            365 * 24 * 60 * 60
         }
     }
 }
