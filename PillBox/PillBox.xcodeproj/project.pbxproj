@@ -20,6 +20,7 @@
 		5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9472C9C4636007C4355 /* UserEntity.swift */; };
 		5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */; };
 		521AFDDD2CCE2CFA00AA26D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AFDDC2CCE2CF400AA26D2 /* Router.swift */; };
+		523379E82D10557000F7C1D9 /* PermissionErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523379E72D10556900F7C1D9 /* PermissionErrorView.swift */; };
 		523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 523B25CC2C21C5D000331697 /* Localizable.xcstrings */; };
 		523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B25D02C21D9A900331697 /* ReusableCell.swift */; };
 		526908EA2CDA248E00BE5B85 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526908E92CDA248A00BE5B85 /* ViewState.swift */; };
@@ -73,6 +74,7 @@
 		5217B9472C9C4636007C4355 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
 		521AFDDC2CCE2CF400AA26D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		523379E72D10556900F7C1D9 /* PermissionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionErrorView.swift; sourceTree = "<group>"; };
 		523B25CC2C21C5D000331697 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		523B25D02C21D9A900331697 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		526908E92CDA248A00BE5B85 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
@@ -249,6 +251,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		523379E62D1054C000F7C1D9 /* PermissionErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				523379E72D10556900F7C1D9 /* PermissionErrorView.swift */,
+			);
+			path = PermissionErrorView;
+			sourceTree = "<group>";
+		};
 		523B25CE2C21CC0700331697 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +329,7 @@
 		526D50CD2CB47491002C894D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				523379E62D1054C000F7C1D9 /* PermissionErrorView */,
 				5217B94A2C9CB09E007C4355 /* Picker */,
 				526D50CC2CB47475002C894D /* SuccessView */,
 				526D50C22CB46744002C894D /* ErrorView */,
@@ -628,6 +639,7 @@
 				5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */,
 				5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */,
 				5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */,
+				523379E82D10557000F7C1D9 /* PermissionErrorView.swift in Sources */,
 				5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */,
 				526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */,
 				523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */,
