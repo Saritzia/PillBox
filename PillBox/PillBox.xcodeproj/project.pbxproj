@@ -46,6 +46,9 @@
 		52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E52C009E8400FB1EB5 /* ContentView.swift */; };
 		52E187E82C009E8500FB1EB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E187E72C009E8500FB1EB5 /* Assets.xcassets */; };
 		52E187EB2C009E8500FB1EB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E187EA2C009E8500FB1EB5 /* Preview Assets.xcassets */; };
+		52E4489D2D27FD8500FF9762 /* InforamationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4489C2D27FD8000FF9762 /* InforamationView.swift */; };
+		52E4489F2D28057F00FF9762 /* Privacidad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 52E4489E2D28057F00FF9762 /* Privacidad.pdf */; };
+		52E448A12D28058500FF9762 /* Privacy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 52E448A02D28058500FF9762 /* Privacy.pdf */; };
 		52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */; };
 		52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */; };
 		52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E372CAB281F0047AEB0 /* DrugEntity.swift */; };
@@ -110,6 +113,9 @@
 		52E187EA2C009E8500FB1EB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E187F02C009E8600FB1EB5 /* PillBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E187FA2C009E8600FB1EB5 /* PillBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E4489C2D27FD8000FF9762 /* InforamationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforamationView.swift; sourceTree = "<group>"; };
+		52E4489E2D28057F00FF9762 /* Privacidad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Privacidad.pdf; sourceTree = "<group>"; };
+		52E448A02D28058500FF9762 /* Privacy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Privacy.pdf; sourceTree = "<group>"; };
 		52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugConfigurationView.swift; sourceTree = "<group>"; };
 		52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDataManagementUseCase.swift; sourceTree = "<group>"; };
 		52E79E372CAB281F0047AEB0 /* DrugEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugEntity.swift; sourceTree = "<group>"; };
@@ -351,6 +357,7 @@
 		526D50CD2CB47491002C894D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52E4489B2D27FD6F00FF9762 /* InformationView */,
 				523379E62D1054C000F7C1D9 /* PermissionErrorView */,
 				5217B94A2C9CB09E007C4355 /* Picker */,
 				526D50CC2CB47475002C894D /* SuccessView */,
@@ -487,6 +494,8 @@
 				52E1880E2C00A05300FB1EB5 /* Libraries */,
 				52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */,
 				52E187E52C009E8400FB1EB5 /* ContentView.swift */,
+				52E448A02D28058500FF9762 /* Privacy.pdf */,
+				52E4489E2D28057F00FF9762 /* Privacidad.pdf */,
 				52E187E72C009E8500FB1EB5 /* Assets.xcassets */,
 				52E187E92C009E8500FB1EB5 /* Preview Content */,
 			);
@@ -540,6 +549,14 @@
 				52E1880D2C009EFC00FB1EB5 /* Presentation */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		52E4489B2D27FD6F00FF9762 /* InformationView */ = {
+			isa = PBXGroup;
+			children = (
+				52E4489C2D27FD8000FF9762 /* InforamationView.swift */,
+			);
+			path = InformationView;
 			sourceTree = "<group>";
 		};
 		52E79E2F2CAB244C0047AEB0 /* DrugConfiguration */ = {
@@ -692,8 +709,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E187EB2C009E8500FB1EB5 /* Preview Assets.xcassets in Resources */,
+				52E4489F2D28057F00FF9762 /* Privacidad.pdf in Resources */,
 				52E187E82C009E8500FB1EB5 /* Assets.xcassets in Resources */,
 				523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */,
+				52E448A12D28058500FF9762 /* Privacy.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,6 +763,7 @@
 				5217B9272C9AD795007C4355 /* DrugModel.swift in Sources */,
 				52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */,
 				529EF68B2CC5266600092E81 /* ReusableTableViewModel.swift in Sources */,
+				52E4489D2D27FD8500FF9762 /* InforamationView.swift in Sources */,
 				5286A91A2C9181D700E82284 /* UserModel.swift in Sources */,
 				52B3ABF82CE887AE00A71AAE /* DrugConfigurationViewModel.swift in Sources */,
 			);

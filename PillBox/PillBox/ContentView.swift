@@ -6,6 +6,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack (alignment: .center, spacing: 150) {
+            Spacer()
             Label("PillBox", image: "")
                 .foregroundStyle(LinearGradient(colors: [.gray, .black],
                                                 startPoint: .leading, endPoint: .trailing))
@@ -28,6 +29,23 @@ struct ContentView: View {
             CustomButton(title: "Start") {
                 router.navigate(to: .userTableView)
             }
+            
+            VStack {
+                NavigationLink(String(localized: "Link")) {
+                    InformationView(url: getURL())
+                }
+                .foregroundStyle(.black)
+                .bold()
+                .font(.system(size: 10))
+            }
+        }
+    }
+    
+    private func getURL() -> URL {
+        if Locale.current.language.languageCode?.identifier == "es" {
+            return Bundle.main.url(forResource: "Privacidad", withExtension: "pdf")!
+        } else {
+            return Bundle.main.url(forResource: "Privacy", withExtension: "pdf")!
         }
     }
 }
