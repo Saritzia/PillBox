@@ -12,6 +12,10 @@ final class UsersDataManagementUseCase: UsersDataManagementUseCaseContract {
         self.usersRepository = UsersRepository()
     }
     
+    init(repository: UsersRepositoryContract) {
+        self.usersRepository = repository
+    }
+    
     func fetchUsers() -> [UserModel]? {
         usersRepository.fetchUsers()
     }

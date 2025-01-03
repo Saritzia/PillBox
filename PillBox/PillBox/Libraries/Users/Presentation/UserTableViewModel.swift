@@ -13,6 +13,14 @@ final class UserTableViewModel: ReusableTableViewModelContract {
             await self?.fetchData()
         }
     }
+    
+    init(useCase: UsersDataManagementUseCaseContract) {
+        self.usersDataManagementUseCase = useCase
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
+    }
 
     @MainActor
     func fetchData() {
