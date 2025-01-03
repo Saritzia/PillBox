@@ -13,6 +13,10 @@ final class DrugsDataManagementUseCase: DrugsDataManagementUseCaseContract {
         self.drugsRepository = DrugsRepository()
     }
     
+    init(repository: DrugsRepositoryContract) {
+        self.drugsRepository = repository
+    }
+    
     func fetchDrugs(user: String) -> [DrugModel]? {
         drugsRepository.fetchDrugs(user: user)
     }

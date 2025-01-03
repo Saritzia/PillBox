@@ -17,6 +17,15 @@ final class DrugsTableViewModel: ReusableTableViewModelContract {
         }
     }
     
+    init(userId: String, useCase: DrugsDataManagementUseCaseContract) {
+        self.userId = userId
+        self.drugsDataManagementUseCase = useCase
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
+    }
+    
     @MainActor
     func fetchData() {
         viewSate = .render

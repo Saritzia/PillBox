@@ -22,6 +22,18 @@ final class DrugsConfigurationViewModel: ObservableObject {
         }
     }
     
+    init(userId: String,
+         drugId: String? = nil,
+         drugsDataManagementUseCase: DrugsDataManagementUseCaseContract) {
+        self.userId = userId
+        self.drugId = drugId
+        self.drugsDataManagementUseCase = drugsDataManagementUseCase
+        currentTask?.cancel()
+        currentTask = Task { [weak self] in
+            await self?.fetchData()
+        }
+    }
+    
     @MainActor
     func fetchData() {
         Task {
