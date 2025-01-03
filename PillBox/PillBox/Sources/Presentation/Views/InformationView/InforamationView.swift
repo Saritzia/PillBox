@@ -12,9 +12,11 @@ struct InformationView: View {
     var body: some View {
             // Using the PDFKitView and passing the previously created pdfURL
             PDFKitView(url: url)
-                .scaledToFill()
+                .padding(.top, 50)
+                .imageScale(.large)
                 .colorInvert()
                 .background(.black)
+                .ignoresSafeArea()
     }
 }
 
@@ -24,10 +26,9 @@ struct PDFKitView: UIViewRepresentable {
     
     func makeUIView(context: UIViewRepresentableContext<PDFKitView>) -> PDFView {
         let pdfView = PDFView()
-        pdfView.displayDirection = .vertical
-        pdfView.displayMode = .singlePage
-        pdfView.pageBreakMargins = UIEdgeInsets(top: 8, left: 20, bottom: 8, right: 20)
+        pdfView.displayMode = .singlePageContinuous
         pdfView.autoScales = true
+        pdfView.displayDirection = .vertical
         pdfView.document = PDFDocument(url: url)
         return pdfView
     }
