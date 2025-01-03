@@ -1,0 +1,1122 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5217B9272C9AD795007C4355 /* DrugModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9262C9AD791007C4355 /* DrugModel.swift */; };
+		5217B92A2C9B1065007C4355 /* UserTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9292C9B1058007C4355 /* UserTableViewModel.swift */; };
+		5217B92C2C9B10E6007C4355 /* UserTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B92B2C9B10DF007C4355 /* UserTableView.swift */; };
+		5217B92F2C9B2411007C4355 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B92E2C9B240E007C4355 /* AddButton.swift */; };
+		5217B9322C9B4DB9007C4355 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5217B9312C9B4DB9007C4355 /* RealmSwift */; };
+		5217B9352C9B4E07007C4355 /* UsersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9342C9B4DFE007C4355 /* UsersRepository.swift */; };
+		5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9392C9B521F007C4355 /* DrugsRepository.swift */; };
+		5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B93D2C9B525C007C4355 /* UsersDataManagementUseCase.swift */; };
+		5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9422C9B5486007C4355 /* DrugsTableView.swift */; };
+		5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */; };
+		5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B9472C9C4636007C4355 /* UserEntity.swift */; };
+		5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */; };
+		521AFDDD2CCE2CFA00AA26D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521AFDDC2CCE2CF400AA26D2 /* Router.swift */; };
+		523379E82D10557000F7C1D9 /* PermissionErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523379E72D10556900F7C1D9 /* PermissionErrorView.swift */; };
+		523379EC2D10929F00F7C1D9 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523379EB2D10929F00F7C1D9 /* RouterTests.swift */; };
+		523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 523B25CC2C21C5D000331697 /* Localizable.xcstrings */; };
+		523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523B25D02C21D9A900331697 /* ReusableCell.swift */; };
+		526908EA2CDA248E00BE5B85 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526908E92CDA248A00BE5B85 /* ViewState.swift */; };
+		526D50C52CB46783002C894D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C42CB4677C002C894D /* ErrorView.swift */; };
+		526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50C72CB4701F002C894D /* ImageAndLabels.swift */; };
+		526D50CB2CB470FB002C894D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50CA2CB470F5002C894D /* CustomButton.swift */; };
+		526D50CF2CB474BC002C894D /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D50CE2CB474B6002C894D /* SuccessView.swift */; };
+		5286A91A2C9181D700E82284 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5286A9192C9181D700E82284 /* UserModel.swift */; };
+		5296EF162D274D8E00F1C571 /* DrugsConfigurationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF152D274D8900F1C571 /* DrugsConfigurationViewModelTests.swift */; };
+		5296EF192D274E8D00F1C571 /* DrugsDataManagementUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF182D274E8800F1C571 /* DrugsDataManagementUseCaseMock.swift */; };
+		5296EF1D2D275FD700F1C571 /* DrugsTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF1C2D275FCF00F1C571 /* DrugsTableViewModelTests.swift */; };
+		5296EF202D2768B100F1C571 /* DrugsDataManagementUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF1F2D2768AF00F1C571 /* DrugsDataManagementUseCaseTests.swift */; };
+		5296EF222D27694000F1C571 /* DrugsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF212D27693600F1C571 /* DrugsRepositoryMock.swift */; };
+		5296EF262D276DD700F1C571 /* UsersRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF252D276DD000F1C571 /* UsersRepositoryMock.swift */; };
+		5296EF282D276F7000F1C571 /* UsersDataManagementUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF272D276F6200F1C571 /* UsersDataManagementUseCaseTests.swift */; };
+		5296EF2A2D27705F00F1C571 /* UsersDataManagementUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF292D27705300F1C571 /* UsersDataManagementUseCaseMock.swift */; };
+		5296EF2D2D2771A600F1C571 /* UserTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296EF2C2D27719900F1C571 /* UserTableViewModelTests.swift */; };
+		529EF6892CC5260500092E81 /* SwipableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EF6852CC5260500092E81 /* SwipableCellDelegate.swift */; };
+		529EF68B2CC5266600092E81 /* ReusableTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529EF68A2CC5266600092E81 /* ReusableTableViewModel.swift */; };
+		52B3ABF82CE887AE00A71AAE /* DrugConfigurationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */; };
+		52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */; };
+		52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E187E52C009E8400FB1EB5 /* ContentView.swift */; };
+		52E187E82C009E8500FB1EB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E187E72C009E8500FB1EB5 /* Assets.xcassets */; };
+		52E187EB2C009E8500FB1EB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E187EA2C009E8500FB1EB5 /* Preview Assets.xcassets */; };
+		52E4489D2D27FD8500FF9762 /* InforamationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E4489C2D27FD8000FF9762 /* InforamationView.swift */; };
+		52E4489F2D28057F00FF9762 /* Privacidad.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 52E4489E2D28057F00FF9762 /* Privacidad.pdf */; };
+		52E448A12D28058500FF9762 /* Privacy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 52E448A02D28058500FF9762 /* Privacy.pdf */; };
+		52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */; };
+		52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */; };
+		52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E79E372CAB281F0047AEB0 /* DrugEntity.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52E187F12C009E8600FB1EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52E187D82C009E8400FB1EB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52E187DF2C009E8400FB1EB5;
+			remoteInfo = PillBox;
+		};
+		52E187FB2C009E8600FB1EB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52E187D82C009E8400FB1EB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52E187DF2C009E8400FB1EB5;
+			remoteInfo = PillBox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5217B9262C9AD791007C4355 /* DrugModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugModel.swift; sourceTree = "<group>"; };
+		5217B9292C9B1058007C4355 /* UserTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewModel.swift; sourceTree = "<group>"; };
+		5217B92B2C9B10DF007C4355 /* UserTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableView.swift; sourceTree = "<group>"; };
+		5217B92E2C9B240E007C4355 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		5217B9342C9B4DFE007C4355 /* UsersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepository.swift; sourceTree = "<group>"; };
+		5217B9392C9B521F007C4355 /* DrugsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsRepository.swift; sourceTree = "<group>"; };
+		5217B93D2C9B525C007C4355 /* UsersDataManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataManagementUseCase.swift; sourceTree = "<group>"; };
+		5217B9422C9B5486007C4355 /* DrugsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableView.swift; sourceTree = "<group>"; };
+		5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewModel.swift; sourceTree = "<group>"; };
+		5217B9472C9C4636007C4355 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
+		521AFDDC2CCE2CF400AA26D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		523379E72D10556900F7C1D9 /* PermissionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionErrorView.swift; sourceTree = "<group>"; };
+		523379EB2D10929F00F7C1D9 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		523B25CC2C21C5D000331697 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		523B25D02C21D9A900331697 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		526908E92CDA248A00BE5B85 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		526D50C42CB4677C002C894D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		526D50C72CB4701F002C894D /* ImageAndLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndLabels.swift; sourceTree = "<group>"; };
+		526D50CA2CB470F5002C894D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		526D50CE2CB474B6002C894D /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		5286A9192C9181D700E82284 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5296EF152D274D8900F1C571 /* DrugsConfigurationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsConfigurationViewModelTests.swift; sourceTree = "<group>"; };
+		5296EF182D274E8800F1C571 /* DrugsDataManagementUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsDataManagementUseCaseMock.swift; sourceTree = "<group>"; };
+		5296EF1C2D275FCF00F1C571 /* DrugsTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewModelTests.swift; sourceTree = "<group>"; };
+		5296EF1F2D2768AF00F1C571 /* DrugsDataManagementUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsDataManagementUseCaseTests.swift; sourceTree = "<group>"; };
+		5296EF212D27693600F1C571 /* DrugsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsRepositoryMock.swift; sourceTree = "<group>"; };
+		5296EF252D276DD000F1C571 /* UsersRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepositoryMock.swift; sourceTree = "<group>"; };
+		5296EF272D276F6200F1C571 /* UsersDataManagementUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataManagementUseCaseTests.swift; sourceTree = "<group>"; };
+		5296EF292D27705300F1C571 /* UsersDataManagementUseCaseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataManagementUseCaseMock.swift; sourceTree = "<group>"; };
+		5296EF2C2D27719900F1C571 /* UserTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewModelTests.swift; sourceTree = "<group>"; };
+		529EF6852CC5260500092E81 /* SwipableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableCellDelegate.swift; sourceTree = "<group>"; };
+		529EF68A2CC5266600092E81 /* ReusableTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewModel.swift; sourceTree = "<group>"; };
+		52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugConfigurationViewModel.swift; sourceTree = "<group>"; };
+		52E187E02C009E8400FB1EB5 /* PillBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillBoxApp.swift; sourceTree = "<group>"; };
+		52E187E52C009E8400FB1EB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52E187E72C009E8500FB1EB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52E187EA2C009E8500FB1EB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52E187F02C009E8600FB1EB5 /* PillBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E187FA2C009E8600FB1EB5 /* PillBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PillBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E4489C2D27FD8000FF9762 /* InforamationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforamationView.swift; sourceTree = "<group>"; };
+		52E4489E2D28057F00FF9762 /* Privacidad.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Privacidad.pdf; sourceTree = "<group>"; };
+		52E448A02D28058500FF9762 /* Privacy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Privacy.pdf; sourceTree = "<group>"; };
+		52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugConfigurationView.swift; sourceTree = "<group>"; };
+		52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDataManagementUseCase.swift; sourceTree = "<group>"; };
+		52E79E372CAB281F0047AEB0 /* DrugEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugEntity.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52E187DD2C009E8400FB1EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5217B9322C9B4DB9007C4355 /* RealmSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187ED2C009E8600FB1EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187F72C009E8600FB1EB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5217B92D2C9B2405007C4355 /* AddButton */ = {
+			isa = PBXGroup;
+			children = (
+				5217B92E2C9B240E007C4355 /* AddButton.swift */,
+			);
+			path = AddButton;
+			sourceTree = "<group>";
+		};
+		5217B9332C9B4DEC007C4355 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9492C9C48AB007C4355 /* Repositories */,
+				5217B9462C9C4625007C4355 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5217B9362C9B508C007C4355 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5217B93D2C9B525C007C4355 /* UsersDataManagementUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		5217B9372C9B5209007C4355 /* Drugs */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9412C9B5376007C4355 /* Presentation */,
+				5217B93B2C9B522F007C4355 /* Domain */,
+				5217B9382C9B5215007C4355 /* Data */,
+			);
+			path = Drugs;
+			sourceTree = "<group>";
+		};
+		5217B9382C9B5215007C4355 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E392CAB28530047AEB0 /* Repositories */,
+				52E79E362CAB280A0047AEB0 /* Entities */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5217B93B2C9B522F007C4355 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E332CAB26FE0047AEB0 /* UseCases */,
+				5217B93C2C9B5240007C4355 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5217B93C2C9B5240007C4355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9262C9AD791007C4355 /* DrugModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5217B93F2C9B5271007C4355 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CD2CB47491002C894D /* Views */,
+				5217B9402C9B5279007C4355 /* Sections */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5217B9402C9B5279007C4355 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				529EF6872CC5260500092E81 /* TableView */,
+				526D50C92CB470EA002C894D /* CustomButton */,
+				526D50C62CB47003002C894D /* CustomImageAndLabels */,
+				523B25CF2C21D98F00331697 /* Cell */,
+				5217B92D2C9B2405007C4355 /* AddButton */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		5217B9412C9B5376007C4355 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9442C9B54BC007C4355 /* DrugsTableViewModel.swift */,
+				5217B9422C9B5486007C4355 /* DrugsTableView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5217B9462C9C4625007C4355 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9472C9C4636007C4355 /* UserEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5217B9492C9C48AB007C4355 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9342C9B4DFE007C4355 /* UsersRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5217B94A2C9CB09E007C4355 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				5217B94B2C9CB0A7007C4355 /* AvatarPickerView.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		521AFDDB2CCE2CD100AA26D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				526908E82CDA248300BE5B85 /* ViewState */,
+				526908E72CDA247B00BE5B85 /* Router */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		523379E62D1054C000F7C1D9 /* PermissionErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				523379E72D10556900F7C1D9 /* PermissionErrorView.swift */,
+			);
+			path = PermissionErrorView;
+			sourceTree = "<group>";
+		};
+		523379E92D10926100F7C1D9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				523379EB2D10929F00F7C1D9 /* RouterTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		523B25CE2C21CC0700331697 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				521AFDDB2CCE2CD100AA26D2 /* Common */,
+				5217B93F2C9B5271007C4355 /* Presentation */,
+				523B25CC2C21C5D000331697 /* Localizable.xcstrings */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		523B25CF2C21D98F00331697 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				529EF6852CC5260500092E81 /* SwipableCellDelegate.swift */,
+				523B25D02C21D9A900331697 /* ReusableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		526908E72CDA247B00BE5B85 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				521AFDDC2CCE2CF400AA26D2 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		526908E82CDA248300BE5B85 /* ViewState */ = {
+			isa = PBXGroup;
+			children = (
+				526908E92CDA248A00BE5B85 /* ViewState.swift */,
+			);
+			path = ViewState;
+			sourceTree = "<group>";
+		};
+		526D50C22CB46744002C894D /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				526D50C42CB4677C002C894D /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		526D50C62CB47003002C894D /* CustomImageAndLabels */ = {
+			isa = PBXGroup;
+			children = (
+				526D50C72CB4701F002C894D /* ImageAndLabels.swift */,
+			);
+			path = CustomImageAndLabels;
+			sourceTree = "<group>";
+		};
+		526D50C92CB470EA002C894D /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CA2CB470F5002C894D /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		526D50CC2CB47475002C894D /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				526D50CE2CB474B6002C894D /* SuccessView.swift */,
+			);
+			path = SuccessView;
+			sourceTree = "<group>";
+		};
+		526D50CD2CB47491002C894D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E4489B2D27FD6F00FF9762 /* InformationView */,
+				523379E62D1054C000F7C1D9 /* PermissionErrorView */,
+				5217B94A2C9CB09E007C4355 /* Picker */,
+				526D50CC2CB47475002C894D /* SuccessView */,
+				526D50C22CB46744002C894D /* ErrorView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5286A9172C9181B200E82284 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9362C9B508C007C4355 /* UseCases */,
+				5286A9182C9181BF00E82284 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5286A9182C9181BF00E82284 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5286A9192C9181D700E82284 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5296EF132D274D4100F1C571 /* DrugConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF142D274D5500F1C571 /* Presentation */,
+			);
+			path = DrugConfiguration;
+			sourceTree = "<group>";
+		};
+		5296EF142D274D5500F1C571 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF152D274D8900F1C571 /* DrugsConfigurationViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5296EF172D274E7300F1C571 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF292D27705300F1C571 /* UsersDataManagementUseCaseMock.swift */,
+				5296EF252D276DD000F1C571 /* UsersRepositoryMock.swift */,
+				5296EF212D27693600F1C571 /* DrugsRepositoryMock.swift */,
+				5296EF182D274E8800F1C571 /* DrugsDataManagementUseCaseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5296EF1A2D275F7200F1C571 /* Drugs */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF1E2D27689B00F1C571 /* Domain */,
+				5296EF1B2D275F7B00F1C571 /* Presentation */,
+			);
+			path = Drugs;
+			sourceTree = "<group>";
+		};
+		5296EF1B2D275F7B00F1C571 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF1C2D275FCF00F1C571 /* DrugsTableViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5296EF1E2D27689B00F1C571 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF1F2D2768AF00F1C571 /* DrugsDataManagementUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5296EF232D276DA700F1C571 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF2B2D27717D00F1C571 /* Presentation */,
+				5296EF242D276DB600F1C571 /* Domain */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		5296EF242D276DB600F1C571 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF272D276F6200F1C571 /* UsersDataManagementUseCaseTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5296EF2B2D27717D00F1C571 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF2C2D27719900F1C571 /* UserTableViewModelTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		529EF6872CC5260500092E81 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				529EF68A2CC5266600092E81 /* ReusableTableViewModel.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		52E187D72C009E8400FB1EB5 = {
+			isa = PBXGroup;
+			children = (
+				52E187E22C009E8400FB1EB5 /* PillBox */,
+				52E187F32C009E8600FB1EB5 /* PillBoxTests */,
+				52E187E12C009E8400FB1EB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52E187E12C009E8400FB1EB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E187E02C009E8400FB1EB5 /* PillBox.app */,
+				52E187F02C009E8600FB1EB5 /* PillBoxTests.xctest */,
+				52E187FA2C009E8600FB1EB5 /* PillBoxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52E187E22C009E8400FB1EB5 /* PillBox */ = {
+			isa = PBXGroup;
+			children = (
+				523B25CE2C21CC0700331697 /* Sources */,
+				52E1880E2C00A05300FB1EB5 /* Libraries */,
+				52E187E32C009E8400FB1EB5 /* PillBoxApp.swift */,
+				52E187E52C009E8400FB1EB5 /* ContentView.swift */,
+				52E448A02D28058500FF9762 /* Privacy.pdf */,
+				52E4489E2D28057F00FF9762 /* Privacidad.pdf */,
+				52E187E72C009E8500FB1EB5 /* Assets.xcassets */,
+				52E187E92C009E8500FB1EB5 /* Preview Content */,
+			);
+			path = PillBox;
+			sourceTree = "<group>";
+		};
+		52E187E92C009E8500FB1EB5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52E187EA2C009E8500FB1EB5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52E187F32C009E8600FB1EB5 /* PillBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				5296EF232D276DA700F1C571 /* Users */,
+				5296EF172D274E7300F1C571 /* Mocks */,
+				5296EF1A2D275F7200F1C571 /* Drugs */,
+				5296EF132D274D4100F1C571 /* DrugConfiguration */,
+				523379E92D10926100F7C1D9 /* Common */,
+			);
+			path = PillBoxTests;
+			sourceTree = "<group>";
+		};
+		52E1880D2C009EFC00FB1EB5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5217B92B2C9B10DF007C4355 /* UserTableView.swift */,
+				5217B9292C9B1058007C4355 /* UserTableViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52E1880E2C00A05300FB1EB5 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E2F2CAB244C0047AEB0 /* DrugConfiguration */,
+				5217B9372C9B5209007C4355 /* Drugs */,
+				52E1880F2C00A05A00FB1EB5 /* Users */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		52E1880F2C00A05A00FB1EB5 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9332C9B4DEC007C4355 /* Data */,
+				5286A9172C9181B200E82284 /* Domain */,
+				52E1880D2C009EFC00FB1EB5 /* Presentation */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		52E4489B2D27FD6F00FF9762 /* InformationView */ = {
+			isa = PBXGroup;
+			children = (
+				52E4489C2D27FD8000FF9762 /* InforamationView.swift */,
+			);
+			path = InformationView;
+			sourceTree = "<group>";
+		};
+		52E79E2F2CAB244C0047AEB0 /* DrugConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E302CAB24560047AEB0 /* Presentation */,
+			);
+			path = DrugConfiguration;
+			sourceTree = "<group>";
+		};
+		52E79E302CAB24560047AEB0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E312CAB24630047AEB0 /* DrugConfigurationView.swift */,
+				52B3ABF72CE8879800A71AAE /* DrugConfigurationViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		52E79E332CAB26FE0047AEB0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E342CAB27100047AEB0 /* DrugDataManagementUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		52E79E362CAB280A0047AEB0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				52E79E372CAB281F0047AEB0 /* DrugEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		52E79E392CAB28530047AEB0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5217B9392C9B521F007C4355 /* DrugsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52E187DF2C009E8400FB1EB5 /* PillBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E188042C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBox" */;
+			buildPhases = (
+				52E187DC2C009E8400FB1EB5 /* Sources */,
+				52E187DD2C009E8400FB1EB5 /* Frameworks */,
+				52E187DE2C009E8400FB1EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PillBox;
+			productName = PillBox;
+			productReference = 52E187E02C009E8400FB1EB5 /* PillBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52E187EF2C009E8600FB1EB5 /* PillBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E188072C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBoxTests" */;
+			buildPhases = (
+				52E187EC2C009E8600FB1EB5 /* Sources */,
+				52E187ED2C009E8600FB1EB5 /* Frameworks */,
+				52E187EE2C009E8600FB1EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E187F22C009E8600FB1EB5 /* PBXTargetDependency */,
+			);
+			name = PillBoxTests;
+			productName = PillBoxTests;
+			productReference = 52E187F02C009E8600FB1EB5 /* PillBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52E187F92C009E8600FB1EB5 /* PillBoxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52E1880A2C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBoxUITests" */;
+			buildPhases = (
+				52E187F62C009E8600FB1EB5 /* Sources */,
+				52E187F72C009E8600FB1EB5 /* Frameworks */,
+				52E187F82C009E8600FB1EB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52E187FC2C009E8600FB1EB5 /* PBXTargetDependency */,
+			);
+			name = PillBoxUITests;
+			productName = PillBoxUITests;
+			productReference = 52E187FA2C009E8600FB1EB5 /* PillBoxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52E187D82C009E8400FB1EB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					52E187DF2C009E8400FB1EB5 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					52E187EF2C009E8600FB1EB5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 52E187DF2C009E8400FB1EB5;
+					};
+					52E187F92C009E8600FB1EB5 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 52E187DF2C009E8400FB1EB5;
+					};
+				};
+			};
+			buildConfigurationList = 52E187DB2C009E8400FB1EB5 /* Build configuration list for PBXProject "PillBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = 52E187D72C009E8400FB1EB5;
+			packageReferences = (
+				5217B9302C9B4DB9007C4355 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = 52E187E12C009E8400FB1EB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52E187DF2C009E8400FB1EB5 /* PillBox */,
+				52E187EF2C009E8600FB1EB5 /* PillBoxTests */,
+				52E187F92C009E8600FB1EB5 /* PillBoxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52E187DE2C009E8400FB1EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52E187EB2C009E8500FB1EB5 /* Preview Assets.xcassets in Resources */,
+				52E4489F2D28057F00FF9762 /* Privacidad.pdf in Resources */,
+				52E187E82C009E8500FB1EB5 /* Assets.xcassets in Resources */,
+				523B25CD2C21C5D000331697 /* Localizable.xcstrings in Resources */,
+				52E448A12D28058500FF9762 /* Privacy.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187EE2C009E8600FB1EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187F82C009E8600FB1EB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52E187DC2C009E8400FB1EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5217B9352C9B4E07007C4355 /* UsersRepository.swift in Sources */,
+				52E187E62C009E8400FB1EB5 /* ContentView.swift in Sources */,
+				521AFDDD2CCE2CFA00AA26D2 /* Router.swift in Sources */,
+				5217B92A2C9B1065007C4355 /* UserTableViewModel.swift in Sources */,
+				526D50C52CB46783002C894D /* ErrorView.swift in Sources */,
+				52E187E42C009E8400FB1EB5 /* PillBoxApp.swift in Sources */,
+				52E79E352CAB27140047AEB0 /* DrugDataManagementUseCase.swift in Sources */,
+				5217B9432C9B5493007C4355 /* DrugsTableView.swift in Sources */,
+				529EF6892CC5260500092E81 /* SwipableCellDelegate.swift in Sources */,
+				5217B9482C9C463B007C4355 /* UserEntity.swift in Sources */,
+				526908EA2CDA248E00BE5B85 /* ViewState.swift in Sources */,
+				5217B93A2C9B5228007C4355 /* DrugsRepository.swift in Sources */,
+				5217B94C2C9CB0AE007C4355 /* AvatarPickerView.swift in Sources */,
+				5217B9452C9B54C2007C4355 /* DrugsTableViewModel.swift in Sources */,
+				523379E82D10557000F7C1D9 /* PermissionErrorView.swift in Sources */,
+				5217B93E2C9B526A007C4355 /* UsersDataManagementUseCase.swift in Sources */,
+				526D50C82CB47026002C894D /* ImageAndLabels.swift in Sources */,
+				523B25D12C21D9A900331697 /* ReusableCell.swift in Sources */,
+				526D50CF2CB474BC002C894D /* SuccessView.swift in Sources */,
+				5217B92F2C9B2411007C4355 /* AddButton.swift in Sources */,
+				526D50CB2CB470FB002C894D /* CustomButton.swift in Sources */,
+				5217B92C2C9B10E6007C4355 /* UserTableView.swift in Sources */,
+				52E79E322CAB246E0047AEB0 /* DrugConfigurationView.swift in Sources */,
+				5217B9272C9AD795007C4355 /* DrugModel.swift in Sources */,
+				52E79E382CAB28290047AEB0 /* DrugEntity.swift in Sources */,
+				529EF68B2CC5266600092E81 /* ReusableTableViewModel.swift in Sources */,
+				52E4489D2D27FD8500FF9762 /* InforamationView.swift in Sources */,
+				5286A91A2C9181D700E82284 /* UserModel.swift in Sources */,
+				52B3ABF82CE887AE00A71AAE /* DrugConfigurationViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187EC2C009E8600FB1EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523379EC2D10929F00F7C1D9 /* RouterTests.swift in Sources */,
+				5296EF202D2768B100F1C571 /* DrugsDataManagementUseCaseTests.swift in Sources */,
+				5296EF2D2D2771A600F1C571 /* UserTableViewModelTests.swift in Sources */,
+				5296EF262D276DD700F1C571 /* UsersRepositoryMock.swift in Sources */,
+				5296EF1D2D275FD700F1C571 /* DrugsTableViewModelTests.swift in Sources */,
+				5296EF222D27694000F1C571 /* DrugsRepositoryMock.swift in Sources */,
+				5296EF2A2D27705F00F1C571 /* UsersDataManagementUseCaseMock.swift in Sources */,
+				5296EF282D276F7000F1C571 /* UsersDataManagementUseCaseTests.swift in Sources */,
+				5296EF162D274D8E00F1C571 /* DrugsConfigurationViewModelTests.swift in Sources */,
+				5296EF192D274E8D00F1C571 /* DrugsDataManagementUseCaseMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52E187F62C009E8600FB1EB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52E187F22C009E8600FB1EB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52E187DF2C009E8400FB1EB5 /* PillBox */;
+			targetProxy = 52E187F12C009E8600FB1EB5 /* PBXContainerItemProxy */;
+		};
+		52E187FC2C009E8600FB1EB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52E187DF2C009E8400FB1EB5 /* PillBox */;
+			targetProxy = 52E187FB2C009E8600FB1EB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52E188022C009E8600FB1EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52E188032C009E8600FB1EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52E188052C009E8600FB1EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PillBox/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52E188062C009E8600FB1EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PillBox/Preview Content\"";
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52E188082C009E8600FB1EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillBox";
+			};
+			name = Debug;
+		};
+		52E188092C009E8600FB1EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PillBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PillBox";
+			};
+			name = Release;
+		};
+		52E1880B2C009E8600FB1EB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PillBox;
+			};
+			name = Debug;
+		};
+		52E1880C2C009E8600FB1EB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5ND8Q283RG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = saritzia.PillBoxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PillBox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52E187DB2C009E8400FB1EB5 /* Build configuration list for PBXProject "PillBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E188022C009E8600FB1EB5 /* Debug */,
+				52E188032C009E8600FB1EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E188042C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E188052C009E8600FB1EB5 /* Debug */,
+				52E188062C009E8600FB1EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E188072C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E188082C009E8600FB1EB5 /* Debug */,
+				52E188092C009E8600FB1EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52E1880A2C009E8600FB1EB5 /* Build configuration list for PBXNativeTarget "PillBoxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52E1880B2C009E8600FB1EB5 /* Debug */,
+				52E1880C2C009E8600FB1EB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5217B9302C9B4DB9007C4355 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5217B9312C9B4DB9007C4355 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5217B9302C9B4DB9007C4355 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 52E187D82C009E8400FB1EB5 /* Project object */;
+}
